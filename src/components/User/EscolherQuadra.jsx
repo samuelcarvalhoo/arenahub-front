@@ -2,6 +2,7 @@ import "./EscolherQuadra.css";
 
 import { useState, useEffect } from "react";
 import MapaArena from "../../public/MapaArena.png";
+import fotoquadra from "../../public/fotoquadra.jpg";
 import "./EscolherQuadra.css";
 
 const EscolherQuadra = ({ data, updateFieldHandler, autoadvance, arenaId }) => {
@@ -57,11 +58,11 @@ const EscolherQuadra = ({ data, updateFieldHandler, autoadvance, arenaId }) => {
                 <div key={idQ} className="QuadraCard">
                   <div className="QuadraCard-left">
                     <div className="QuadraCard-thumb">
-                      <svg width="60" height="60" viewBox="0 0 24 24" fill="none" style={{ margin: "20px auto", display: "block" }}>
-                        <rect x="3" y="3" width="18" height="14" rx="2" stroke="#999" strokeWidth="1.5" fill="none" />
-                        <circle cx="8" cy="9" r="2" fill="#999" />
-                        <path d="M3 15l5-4 4 3 5-4 4 3v4H3v-2z" fill="#999" />
-                      </svg>
+                      <img
+                        src={fotoquadra}
+                        alt="Mapa da Arena Vegas Sport Beer"
+                        className="arena-map-image"
+                      />
                     </div>
                   </div>
 
@@ -112,7 +113,7 @@ const EscolherQuadra = ({ data, updateFieldHandler, autoadvance, arenaId }) => {
           )}
         </div>
 
-        <div className="dividi"> 
+        <div className="dividi">
           <aside className="arena-info-sidebar">
             <div className="arena-map" style={{ position: 'relative' }}>
               <a

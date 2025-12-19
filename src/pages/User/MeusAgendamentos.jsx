@@ -7,6 +7,7 @@ import ReservationCard from '../../components/User/ReservationCard.jsx';
 import EmptyState from '../../components/User/EmptyState.jsx';
 import "./MeusAgendamentos.css";
 
+
 function formatarData(dataStr) {
   const data = new Date(dataStr);
   const dia = String(data.getDate()).padStart(2, '0');
