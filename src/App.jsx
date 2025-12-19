@@ -5,6 +5,9 @@ import MeusAgendamentos from "./pages/User/MeusAgendamentos.jsx";
 
 import "./App.css";
 
+console.log("Ambiente:", import.meta.env.MODE);
+console.log("URL da API:", import.meta.env.VITE_API_URL);
+
 function App() {
   return (
     <BrowserRouter>
