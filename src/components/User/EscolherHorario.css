@@ -104,3 +104,15 @@
     width: 100%;
     gap: 1rem;
 }
+
+@media (max-width: 768px) {
+  .dia-selecionado {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .form-horario-container,
+  .dados-horario-container {
+    margin: 1rem 0;
+  }
+}

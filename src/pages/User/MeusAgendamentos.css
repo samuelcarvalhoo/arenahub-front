@@ -14,10 +14,10 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Figtree', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f5f5;
+  background-color: #fff;
   color: #1a1a1a;
 }
 
@@ -43,7 +43,7 @@ button {
    ========================================================================== */
 .page-container {
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background-color: #fff;
 }
 
 .main-content {
@@ -59,7 +59,7 @@ button {
   background: white;
   border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.267);
   transition: box-shadow 0.3s;
 }
 
@@ -351,7 +351,7 @@ body.menu-active {
     width: 20px !important;
     height: 20px !important;
   }
-
+}
 
   /* ==========================================================================
    6. MODAL DE CONFIRMAÇÃO (ARENA HUB)
@@ -470,13 +470,13 @@ body.menu-active {
   }
 
   .ah-btn-danger {
-    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #ff4400 100%);
     color: #fff;
     box-shadow: 0 6px 16px rgba(220, 38, 38, 0.35);
   }
 
   .ah-btn-danger:hover {
-    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+    background: linear-gradient(135deg, #FF6B35 0%, #ff4400 100%);
     box-shadow: 0 8px 18px rgba(220, 38, 38, 0.45);
     transform: translateY(-1px);
   }
@@ -562,109 +562,9 @@ body.menu-active {
     animation: ahPopIn 250ms cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
   }
-
-  .opcao-admin:hover .icon-opcao {
-    width: 22px !important;
-    height: 22px !important;
-  }
-
-  .user-nav {
-    gap: 8px;
-    margin-right: 15px;
-  }
-
-  .user-nav h2 {
-    font-size: 14px;
-  }
-
-  .user-nav svg {
-    width: 28px !important;
-    height: 28px !important;
-  }
-}
-
-/* Celulares (até 480px) */
-@media (max-width: 480px) {
-  .hamburger-button {
-    width: 40px;
-    height: 40px;
-    top: 10px;
-    left: 10px;
-  }
-
-  .BarraLateral {
-    width: 220px;
-  }
-
-  .BarraSuperior {
-    height: 60px;
-    padding-left: 70px;
-  }
-
-  .logo-center-mobile h2 {
-    font-size: 15px;
-  }
-
-  .Container-Conteudo {
-    margin-top: 50px;
-    height: calc(100vh - 50px);
-    padding: 8px;
-  }
-
-  .conteiner-logo {
-    height: 70px;
-  }
-
-  .logo {
-    height: 30px;
-  }
-
-  .conteiner-logo h2 {
-    font-size: 16px;
-  }
-
-  .opcao-admin {
-    padding-left: 20px;
-    height: 45px;
-    gap: 10px;
-  }
-
-  .opcao-admin h2 {
-    font-size: 13px;
-  }
-
-  .icon-opcao {
-    width: 18px !important;
-    height: 18px !important;
-  }
-
-  .user-nav {
-    margin-right: 10px;
-  }
-
-  .user-nav h2 {
-    display: none;
-  }
-
-  .user-nav svg {
-    width: 24px !important;
-    height: 24px !important;
-  }
-}
-
-/* Telas muito pequenas (até 360px) */
-@media (max-width: 360px) {
-  .logo-center-mobile h2 {
-    display: none;
-  }
-
-  .logo-mobile {
-    height: 30px;
-  }
-}
-
+  
 /* ==========================================================================
-   6. CARDS DE AGENDAMENTO E LISTAGEM
+   7. ESTADOS VAZIOS E LOADING
    ========================================================================== */
 .reservations-list {
   display: flex;
@@ -1669,3 +1569,6 @@ body.menu-active {
     font-size: 5px;
   }
 }
+/* ==========================================================================
+   5. RESPONSIVIDADE GERAL DO LAYOUT
+   ========================================================================== */

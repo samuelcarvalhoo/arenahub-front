@@ -184,3 +184,35 @@ body {
     gap: 2rem;
     align-items: center;
 }
+
+@media (max-width: 768px) {
+  .BarraSuperiorUser {
+    padding: 0 5%;
+  }
+
+  .container-nav-user {
+    gap: 1rem;
+  }
+
+  .logo-nav h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .BarraSuperiorUser {
+    padding: 0 2%;
+  }
+
+  .container-nav-user {
+    gap: 0.5rem;
+  }
+
+  .intem-nav span {
+    display: none;
+  }
+
+    .logo-nav h2 {
+        display: none;
+    }
+}

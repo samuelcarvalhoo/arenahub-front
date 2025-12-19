@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import logo from "../../public/arena-hub.svg";
+import JuniorSoccerAnimation from "../../components/Animations/JuniorSoccerAnimation.jsx";
+
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -17,11 +19,11 @@ export default function Login() {
         setLoading(true);
 
         try {
-            const url = isRegistering 
+            const url = isRegistering
                 ? `${import.meta.env.VITE_API_URL}/cliente/cadastro`
                 : `${import.meta.env.VITE_API_URL}/cliente/login`;
-            
-            const body = isRegistering 
+
+            const body = isRegistering
                 ? { email, senha: password, nome, telefone }
                 : { email, senha: password };
 
@@ -42,20 +44,20 @@ export default function Login() {
                 setIsRegistering(false);
             } else {
                 console.log("Login successful. Backend response:", data);
-                
+
                 if (data.cliente && data.cliente.id) {
                     console.log("Saving client ID to localStorage:", data.cliente.id);
                     localStorage.setItem("id_cliente", data.cliente.id);
-                    
+
                     if (data.cliente.nome) {
                         localStorage.setItem("nome_cliente", data.cliente.nome);
                     } else {
                         console.warn("Client name is missing in response, setting default.");
                         localStorage.setItem("nome_cliente", "Cliente");
                     }
-                    
+
                     alert("Login realizado com sucesso!");
-                    
+
                     const redirectPath = localStorage.getItem('redirectAfterLogin');
                     if (redirectPath) {
                         localStorage.removeItem('redirectAfterLogin');
@@ -77,83 +79,83 @@ export default function Login() {
     };
 
     return (
-        <div className="login-container">
-            <div className="login-content">
-                <div className="login-header">
-                    <img src={logo} alt="Arena Hub" className="logo-img" />
-                    <h1 className="logo-text">Arena Hub</h1>
-                </div>
+        <div className="alinhaLogin">
+            <div className="login-container">
+                <div className="login-content">
 
-                <div className="login-box">
-                    <h2>{isRegistering ? "Crie sua conta" : "Entre na sua conta"}</h2>
 
-                    <form className="login-form" onSubmit={handleAuth}>
-                        {isRegistering && (
-                            <>
-                                <div className="input-group">
-                                    <label>Nome Completo</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="Digite seu nome" 
-                                        required 
-                                        value={nome}
-                                        onChange={(e) => setNome(e.target.value)}
-                                    />
-                                </div>
-                                <div className="input-group">
-                                    <label>Telefone</label>
-                                    <input 
-                                        type="text" 
-                                        placeholder="Digite seu telefone" 
-                                        value={telefone}
-                                        onChange={(e) => setTelefone(e.target.value)}
-                                    />
-                                </div>
-                            </>
-                        )}
+                    <div className="login-box">
+                        <h2>{isRegistering ? "Crie sua conta" : "Entre na sua conta"}</h2>
 
-                        <div className="input-group">
-                            <label>E-mail</label>
-                            <input 
-                                type="email" 
-                                placeholder="Insira o seu e-mail" 
-                                required 
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
+                        <form className="login-form" onSubmit={handleAuth}>
+                            {isRegistering && (
+                                <>
+                                    <div className="input-group">
+                                        <label>Nome Completo</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Digite seu nome"
+                                            required
+                                            value={nome}
+                                            onChange={(e) => setNome(e.target.value)}
+                                        />
+                                    </div>
+                                    <div className="input-group">
+                                        <label>Telefone</label>
+                                        <input
+                                            type="text"
+                                            placeholder="Digite seu telefone"
+                                            value={telefone}
+                                            onChange={(e) => setTelefone(e.target.value)}
+                                        />
+                                    </div>
+                                </>
+                            )}
+
+                            <div className="input-group">
+                                <label>E-mail</label>
+                                <input
+                                    type="email"
+                                    placeholder="Insira o seu e-mail"
+                                    required
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="input-group">
+                                <label>Senha</label>
+                                <input
+                                    type="password"
+                                    placeholder="Insira sua senha"
+                                    required
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
+
+                            <button type="submit" className="btn-primary" disabled={loading}>
+                                {loading ? "Carregando..." : isRegistering ? "Cadastrar" : "Entrar"}
+                            </button>
+
+                            {!isRegistering && (
+                                <a href="#" className="forgot-password">Esqueci a minha senha</a>
+                            )}
+                        </form>
+
+                        <div className="create-account-container">
+                            <button
+                                className="btn-secondary"
+                                type="button"
+                                onClick={() => setIsRegistering(!isRegistering)}
+                            >
+                                {isRegistering ? "Já tenho uma conta" : "Criar uma nova conta"}
+                                <span className="arrow-icon">↗</span>
+                            </button>
                         </div>
-
-                        <div className="input-group">
-                            <label>Senha</label>
-                            <input 
-                                type="password" 
-                                placeholder="Insira sua senha" 
-                                required 
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                        </div>
-
-                        <button type="submit" className="btn-primary" disabled={loading}>
-                            {loading ? "Carregando..." : isRegistering ? "Cadastrar" : "Entrar"}
-                        </button>
-
-                        {!isRegistering && (
-                            <a href="#" className="forgot-password">Esqueci a minha senha</a>
-                        )}
-                    </form>
-
-                    <div className="create-account-container">
-                        <button 
-                            className="btn-secondary" 
-                            type="button"
-                            onClick={() => setIsRegistering(!isRegistering)}
-                        >
-                            {isRegistering ? "Já tenho uma conta" : "Criar uma nova conta"}
-                            <span className="arrow-icon">↗</span>
-                        </button>
                     </div>
                 </div>
+                <JuniorSoccerAnimation />
             </div>
         </div>
     );

@@ -1,0 +1,23 @@
+/* Adicione seus estilos responsivos para a página Agendar aqui */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .actions {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+
+  .actions {
+    padding: 0 1rem;
+  }
+}

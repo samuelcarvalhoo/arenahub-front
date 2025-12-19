@@ -1,19 +1,30 @@
 .login-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+  font-family: 'Figtree';
+    background-color: #FFFFFF;
 }
 
 .login-content {
     background: white;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
     width: 100%;
     max-width: 400px;
     text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 1.5rem;
+    color: #284232;
 }
 
 .login-header {
@@ -93,4 +104,29 @@
     color: #666;
     text-decoration: none;
     font-size: 0.9rem;
+}
+
+.alinhaLogin{
+    margin: 0 180px;
+}
+
+@media (max-width: 935px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .alinhaLogin{
+    margin: 0 0px;
+  }
+}
+@media (max-width: 600px) {
+    .login-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .login-content {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
 }

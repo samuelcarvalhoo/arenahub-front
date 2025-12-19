@@ -9,3 +9,10 @@
     border-radius: 1rem;
     border: 1px solid #ccc;
 }
+
+@media (max-width: 768px) {
+    .agendamento-detalhes{
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}

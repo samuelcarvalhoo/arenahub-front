@@ -209,7 +209,6 @@ export default function Page() {
         (
           <div
             className="ah-modal-overlay ah-modal-fadein"
-            style={{ position: 'fixed', inset: 0, display: 'grid', placeItems: 'center', padding: '32px', background: 'rgba(24,24,27,0.72)', backdropFilter: 'blur(6px)', zIndex: 10000 }}
             role="dialog"
             aria-modal="true"
             aria-labelledby="cancel-modal-title"
@@ -218,7 +217,6 @@ export default function Page() {
           >
             <div
               className="ah-modal-container ah-modal-popin"
-              style={{ background: 'linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)', width: '100%', maxWidth: '520px', borderRadius: '20px', boxShadow: '0 30px 80px rgba(0,0,0,0.28), 0 0 0 1px rgba(0,0,0,0.04)', border: '1px solid rgba(255,255,255,0.9)', overflow: 'hidden', position: 'relative', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}
               onClick={(e) => e.stopPropagation()}
             >
               <button className="ah-modal-close" aria-label="Fechar" onClick={closeConfirm}>

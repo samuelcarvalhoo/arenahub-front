@@ -25,3 +25,15 @@
     border: 1px solid #CCC;
     margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .steps-container {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .quadra-info {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}

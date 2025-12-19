@@ -14,8 +14,8 @@ export default function JuniorSoccerAnimation() {
 
   return (
     <div 
-      className="junior-soccer-container" 
-      style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}
+      className="junior-soccer-container hide-on-mobile" 
+      style={{ width: '100%', maxWidth: '500px', margin: '0' }}
       dangerouslySetInnerHTML={{
         __html: SVG_CONTENT.replace('<svg', '<svg class="animated"')
       }}

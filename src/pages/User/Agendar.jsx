@@ -13,6 +13,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "../../hooks/useForm.jsx";
 
 import "../../App.css";
+import "./Agendar.css";
 
 const formTemplate = {
   id_quadra: "",
