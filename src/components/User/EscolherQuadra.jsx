@@ -98,6 +98,7 @@ const EscolherQuadra = ({ data, updateFieldHandler, autoadvance, arenaId }) => {
                         }
 
                         updateFieldHandler("id_quadra", quadraId);
+                        updateFieldHandler("nome_quadra", quadra.nome);
                         updateFieldHandler("quadra_valor_hora", quadra.valor_hora);
                         autoadvance();
                       }}

@@ -23,7 +23,7 @@ const AgendamentoConfirmado = ({ data }) => {
         </svg>
         <div className="agendamento-info">
           <h3>Agendamento confirmado com sucesso!</h3>
-          <p>Te esperamos na quadra: {data.id_quadra}, no dia: {data.dia} às: {data.horario} até: {calcularHorarioFinal(data.horario, data.duracao)}</p>
+          <p>Te esperamos na quadra: {data.nome_quadra}, no dia: {data.dia} às: {data.horario} até: {calcularHorarioFinal(data.horario, data.duracao)}</p>
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@ import "./Agendar.css";
 
 const formTemplate = {
   id_quadra: "",
+  nome_quadra: "",
   id_cliente: "",
   dia: "",
   inicio: "",
